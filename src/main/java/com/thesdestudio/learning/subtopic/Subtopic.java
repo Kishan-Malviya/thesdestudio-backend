@@ -65,7 +65,7 @@ public class Subtopic {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    protected Subtopic() {
+    public Subtopic() {
         // Required by JPA
     }
 

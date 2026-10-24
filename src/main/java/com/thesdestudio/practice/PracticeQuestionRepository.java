@@ -9,4 +9,6 @@ import java.util.UUID;
 public interface PracticeQuestionRepository extends JpaRepository<PracticeQuestion, UUID> {
 
     List<PracticeQuestion> findBySubtopic_IdAndStatusOrderByDisplayOrderAsc(UUID subtopicId, ContentStatus status);
+
+    List<PracticeQuestion> findBySubtopic_IdOrderByDisplayOrderAsc(UUID subtopicId);
 }

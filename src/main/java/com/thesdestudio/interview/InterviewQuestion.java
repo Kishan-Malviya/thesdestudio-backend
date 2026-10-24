@@ -50,7 +50,7 @@ public class InterviewQuestion {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    protected InterviewQuestion() {
+    public InterviewQuestion() {
         // Required by JPA
     }
 

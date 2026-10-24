@@ -45,7 +45,7 @@ public class Course {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    protected Course() {
+    public Course() {
         // Required by JPA
     }
 

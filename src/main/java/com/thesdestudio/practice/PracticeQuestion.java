@@ -55,7 +55,7 @@ public class PracticeQuestion {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    protected PracticeQuestion() {
+    public PracticeQuestion() {
         // Required by JPA
     }
 

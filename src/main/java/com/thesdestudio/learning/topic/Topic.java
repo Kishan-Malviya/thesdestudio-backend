@@ -62,7 +62,7 @@ public class Topic {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    protected Topic() {
+    public Topic() {
         // Required by JPA
     }
 
