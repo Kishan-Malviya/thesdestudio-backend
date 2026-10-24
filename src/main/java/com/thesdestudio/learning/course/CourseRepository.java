@@ -1,4 +1,4 @@
-package com.thesdestudio.learning;
+package com.thesdestudio.learning.course;
 
 import com.thesdestudio.common.enums.ContentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;

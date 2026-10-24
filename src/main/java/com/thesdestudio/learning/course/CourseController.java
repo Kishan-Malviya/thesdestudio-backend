@@ -1,4 +1,4 @@
-package com.thesdestudio.learning;
+package com.thesdestudio.learning.course;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

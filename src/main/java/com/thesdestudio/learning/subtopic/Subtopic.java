@@ -1,6 +1,7 @@
-package com.thesdestudio.learning;
+package com.thesdestudio.learning.subtopic;
 
 import com.thesdestudio.common.enums.ContentStatus;
+import com.thesdestudio.learning.topic.Topic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

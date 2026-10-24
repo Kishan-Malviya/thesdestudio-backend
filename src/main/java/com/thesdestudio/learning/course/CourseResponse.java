@@ -1,4 +1,4 @@
-package com.thesdestudio.learning;
+package com.thesdestudio.learning.course;
 
 import java.util.UUID;
 

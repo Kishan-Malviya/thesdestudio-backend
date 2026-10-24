@@ -1,48 +1,32 @@
-package com.thesdestudio.learning;
+package com.thesdestudio.learning.course;
 
 import com.thesdestudio.common.enums.ContentStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
 
 import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(
-        name = "topics",
-        uniqueConstraints = {
-                @UniqueConstraint(
-                        name = "uq_topics_course_slug",
-                        columnNames = {"course_id", "slug"}
-                )
-        }
-)
-public class Topic {
+@Table(name = "courses")
+public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "course_id", nullable = false)
-    private Course course;
-
     @Column(nullable = false, length = 200)
     private String title;
 
-    @Column(nullable = false, length = 220)
+    @Column(nullable = false, unique = true, length = 220)
     private String slug;
 
     @Column(columnDefinition = "text")
@@ -61,7 +45,7 @@ public class Topic {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    protected Topic() {
+    protected Course() {
         // Required by JPA
     }
 
@@ -79,14 +63,6 @@ public class Topic {
 
     public UUID getId() {
         return id;
-    }
-
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
     }
 
     public String getTitle() {
