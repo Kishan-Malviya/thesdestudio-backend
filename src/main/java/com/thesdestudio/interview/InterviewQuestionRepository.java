@@ -9,6 +9,12 @@ import java.util.UUID;
 
 public interface InterviewQuestionRepository extends JpaRepository<InterviewQuestion, UUID> {
 
+    List<InterviewQuestion> findByCategoryIgnoreCaseAndDifficultyAndStatusOrderByDisplayOrderAsc(
+            String category, Difficulty difficulty, ContentStatus contentStatus
+    );
+
+    List<InterviewQuestion> findByStatusOrderByDisplayOrderAsc(ContentStatus contentStatus);
+
     List<InterviewQuestion> findByCategoryIgnoreCaseAndStatusOrderByDisplayOrderAsc(
             String category, ContentStatus status);
 
