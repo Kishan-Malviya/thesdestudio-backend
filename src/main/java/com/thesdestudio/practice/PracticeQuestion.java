@@ -2,7 +2,7 @@ package com.thesdestudio.practice;
 
 import com.thesdestudio.common.enums.ContentStatus;
 import com.thesdestudio.common.enums.Difficulty;
-import com.thesdestudio.learning.Subtopic;
+import com.thesdestudio.learning.subtopic.Subtopic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

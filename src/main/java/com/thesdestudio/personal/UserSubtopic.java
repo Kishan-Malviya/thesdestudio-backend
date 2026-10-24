@@ -1,6 +1,6 @@
 package com.thesdestudio.personal;
 
-import com.thesdestudio.learning.Subtopic;
+import com.thesdestudio.learning.subtopic.Subtopic;
 import com.thesdestudio.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
